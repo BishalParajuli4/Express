@@ -1,0 +1,7 @@
+npm install @types/node typescript   /installing typescript
+npx tsc --init    // in tsconfig:- (change out dir(dist),rootdir(src))
+npm install tsx --save-dev    // to create 
+in  package.json::--    tsx --watch src/main.ts
+
+npm install @types/node express   //installing express
+npm install @types/express        // installing type express
