@@ -6,7 +6,9 @@ const router = express.Router();
 router.post("/",middleWareAdmin, createProductController);
 router.put("/:id",putProductController);
 router.get("/:id", getProductbyIdController);
-router.get("/",middleWareUser,getAllProductController);
+router.get("/",getAllProductController);
+//router.get("/",middleWareUser,getAllProductController);
+
 router.delete("/:id", deleteProductController);
 
 
