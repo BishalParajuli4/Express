@@ -1,6 +1,8 @@
 
 import express, {Request, Response, NextFunction} from "express";
 import router from "../src/routes/productRoute";
+import o_router from "../src/routes/orderRoute"
+import userRouter from "./routes/userRoute";
 
 
 const app = express();
@@ -9,7 +11,9 @@ const PORT = 3000;
 
 
 app.use(express.json());
+app.use("/orders",o_router);
 app.use("/products", router);
+app.use("/users",userRouter)
 
 
 
