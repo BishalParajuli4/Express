@@ -1,10 +1,10 @@
 import express, { Response, Request, NextFunction } from "express";
-import { createProductController, deleteProductController, getAllProductController, getProductbyIdController, putProductController } from "../controllers/productController";
+import { createProductController, deleteProductController, getAllProductController, getProductbyIdController, updateProduct } from "../controllers/productController";
 import { middleWareAdmin, middleWareUser } from "../middleware/middleware";
 const router = express.Router();
 
-router.post("/",middleWareAdmin, createProductController);
-router.put("/:id",putProductController);
+router.post("/", createProductController);
+router.put("/:id",updateProduct);
 router.get("/:id", getProductbyIdController);
 router.get("/",getAllProductController);
 //router.get("/",middleWareUser,getAllProductController);
